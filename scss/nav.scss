@@ -1,0 +1,109 @@
+
+.formSearch{
+    &__input{
+        padding-right:26px;
+        width: 100%;
+        background-color: #E7E7E7;
+        border: none;
+        border-radius: 5px;
+        height: 3rem;
+        color: #000000;
+        opacity: 0.50;
+        padding-left: 0.5rem;
+        & ::placeholder {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+    
+    
+        }
+    }
+
+    &:after{
+        content:'';
+        width: 20px;
+        height: 20px;
+        background-image: url("../Search\ Icon.svg");
+        position: absolute;
+        top:50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+        right:8px;
+        z-index: 1000;
+    }
+}
+
+#filter{
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    & button{
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        width: 100%;
+        height: max-content !important;
+        margin: 0 0.3rem 0 0.3rem;
+        color: #FFFFFF;
+        height: 3.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.8rem;
+        & p{
+            margin: 0;
+        }
+        & i {
+            margin: 0 0.4rem 0 0.8rem;
+            position: absolute;
+            top: 1rem;
+            right: 0.5rem;
+        }
+        & div {
+            text-align: start;
+        }
+        
+    }
+
+    & :nth-child(1){
+        background-color: #3282F7;
+        & i {
+            background: none;
+        }
+        & p{
+            background: none;
+        }
+        & input {
+            display: none;
+            background: none;
+            z-index: 1000;
+        }
+        & div {
+            background: none;
+
+        }
+    }
+    & :nth-child(2){
+        background-color: #68D9A4;
+        & i {
+            background: none;
+        }
+    }
+    & :nth-child(3){
+        background-color: #ED6454;
+        & i {
+            background: none;
+        }
+    }
+}
+
+.turnAngleIcon{
+
+    
+        transform: rotate(180deg);
+        top: 1rem;
+        right: 0.5rem;
+    
+}
+
+.filterBoxIngredient{
+    background: none;
+}

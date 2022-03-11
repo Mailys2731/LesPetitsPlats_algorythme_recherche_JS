@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les petits plats</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6075af35c7.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="d-flex flex-column mx-auto">
+    <header class="d-flex justify-content-center">
+        <div class="d-flex flex-column align-items-center">
+            <img src="Vector.svg" alt="logo 'Les Petits Plats'" />
+            <h1>Les petits plats</h1>
+        </div>
+    </header>
+    <nav>
+        <form class="formSearch form-inline position-relative d-block">
+            <input type="text" class="formSearch__input" placeholder="Rechercher un recette" />
+        </form>
+        <div id="filter">
+            <button class="btn btnIngredient">
+                <div id="btnIngredient__boxText">
+                    <input placeholder="Rechercher un ingrédient" id="btnIngredient__input"></input>
+                    <p id="btnIngredient__text">Ingrédients</p>
+                </div>
+                <i class="fas fa-angle-down angleIngredient"></i>
+                <div class="filterBoxIngredient"></div>
+            </button>
+            <button class="btn">
+                Appareils
+                <i class="fas fa-angle-down"></i>
+            </button>
+            <button class="btn">
+                Ustensiles
+                <i class="fas fa-angle-down"></i>
+            </button>
+        </div>
+    </nav>
+    <main>
+        <section id="recipes" class="row d-flex justify-content-center">
+
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="scripts/RecipeFactory.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/generalSearch.js"></script>
+    <script src="scripts/ingredientsFilter.js"></script>
+
+</body>
+
+</html>
