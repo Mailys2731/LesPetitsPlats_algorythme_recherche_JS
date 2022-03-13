@@ -1,21 +1,22 @@
-body{
-    width: 80%;    
+body {
+    width: 80%;
 }
+
 @media screen and (max-width: 1200px) {
-    body{
-        width:100%;
+    body {
+        width: 100%;
     }
 }
-header{
+
+header {
     & div {
-        margin-top:1rem
+        margin-top: 1rem
     }
-    & img{
-        width:3rem
+    & img {
+        width: 3rem
     }
-    & h1{
+    & h1 {
         font-size: 2rem;
         color: #D04F4F;
     }
 }
-

@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les petits plats</title>
     <link href="css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -27,26 +26,58 @@
             <input type="text" class="formSearch__input" placeholder="Rechercher un recette" />
         </form>
         <div id="filter">
-            <button class="btn btnIngredient">
-                <div id="btnIngredient__boxText">
-                    <input placeholder="Rechercher un ingrédient" id="btnIngredient__input"></input>
-                    <p id="btnIngredient__text">Ingrédients</p>
+            <div class="filterBox btn" id="filter1">
+                <a class="filterBox__btnIsClosed openBtn1 align-items-center">
+                    <p class="my-0 ingredientsFilterText">Ingredients</p>
+                    <i class="fas fa-angle-down filterBox__icon ml-2"></i>
+                </a>
+                <div>
+                    <div class="filterBox__btnIsOpen1  filterBox__btnIsOpen">
+                        <input type=" text " placeholder="Rechercher un ingrédient " class="inputFilter1 ">
+                        <a class="closeBtn closeBtn1">
+                            <i class="fas fa-angle-up filterBox__icon "></i>
+                        </a>
+                    </div>
+                    <div class="ingredientsBox ">
+                    </div>
                 </div>
-                <i class="fas fa-angle-down angleIngredient"></i>
-                <div class="filterBoxIngredient"></div>
-            </button>
-            <button class="btn">
-                Appareils
-                <i class="fas fa-angle-down"></i>
-            </button>
-            <button class="btn">
-                Ustensiles
-                <i class="fas fa-angle-down"></i>
-            </button>
+            </div>
+            <div class="filterBox btn" id="filter2">
+                <a class="filterBox__btnIsClosed openBtn2 align-items-center">
+                    <p class="my-0 ustensilsFilterText">Ustensiles</p>
+                    <i class="fas fa-angle-down filterBox__icon ml-2"></i>
+                </a>
+                <div>
+                    <div class="filterBox__btnIsOpen2 filterBox__btnIsOpen">
+                        <input type=" text" placeholder="Rechercher un ustensile" class="inputFilter2">
+                        <a class="closeBtn closeBtn2">
+                            <i class="fas fa-angle-up filterBox__icon"></i>
+                        </a>
+                    </div>
+                    <div class="ustensilsBox">
+                    </div>
+                </div>
+            </div>
+            <div class="filterBox btn" id="filter3">
+                <a class="filterBox__btnIsClosed openBtn3 align-items-center">
+                    <p class="my-0 applianceFilterText">Appareils</p>
+                    <i class="fas fa-angle-down filterBox__icon ml-2"></i>
+                </a>
+                <div>
+                    <div class="filterBox__btnIsOpen3 filterBox__btnIsOpen">
+                        <input type=" text" placeholder="Rechercher un appareil" class="inputFilter3">
+                        <a class="closeBtn closeBtn3">
+                            <i class="fas fa-angle-up filterBox__icon"></i>
+                        </a>
+                    </div>
+                    <div class="applianceBox">
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
     <main>
-        <section id="recipes" class="row d-flex justify-content-center">
+        <section id="recipes" class="row d-flex justify-content-center ">
 
         </section>
 
@@ -54,10 +85,10 @@
     <footer>
 
     </footer>
-    <script src="scripts/RecipeFactory.js"></script>
-    <script src="scripts/index.js"></script>
-    <script src="scripts/generalSearch.js"></script>
-    <script src="scripts/ingredientsFilter.js"></script>
+    <script src="scripts/RecipeFactory.js "></script>
+    <script src="scripts/index.js "></script>
+    <script src="scripts/generalSearch.js "></script>
+    <script src="scripts/ingredientsFilter.js "></script>
 
 </body>
 

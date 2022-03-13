@@ -3,16 +3,16 @@ let allRecipes
 async function getRecipes() {
     return fetch("../recipes.json")
 
-    .then(function (httpBodyResponse) {
+    .then(function(httpBodyResponse) {
         return httpBodyResponse.json()
     })
 
-    .then(function (recipes) {
+    .then(function(recipes) {
         allRecipes = recipes
         console.log(allRecipes)
     })
 
-    .catch(function (error) {
+    .catch(function(error) {
         console.log(error)
         return []
     })
@@ -21,16 +21,17 @@ async function getRecipes() {
 
 
 function displayRecipes() {
-    let datas =""
-    if(newAllRecipes !== ""){
+    let datas = ""
+    console.log(newAllRecipes)
+    if (newAllRecipes !== 0) {
+        console.log("hey")
         datas = newAllRecipes
-    }
-    else{datas = allRecipes.recipes}
-    document.getElementById("recipes").innerHTML =""
+    } else { datas = allRecipes.recipes }
+    document.getElementById("recipes").innerHTML = ""
     datas.forEach(data => {
         const recipeCard = new Recipe(data)
         const displayRecipes = recipeCard.renderCardRecipe()
-        
+
     });
     console.log("recettes actualisées")
 }
@@ -41,4 +42,3 @@ async function init() {
 }
 
 init()
-

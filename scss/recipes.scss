@@ -1,63 +1,61 @@
-
-#recipes{
-    width:100%;
+#recipes {
+    width: 100%;
     justify-self: center;
-    margin:0px;
-    & article{
+    margin: 5rem 0px 0px 0px;
+    & article {
         font-family: "lato";
         width: 22rem;
         max-height: 30rem;
-        margin:0 0.7rem 2rem 0.7rem;
+        margin: 0 0.7rem 2rem 0.7rem;
     }
-    & h2{
+    & h2 {
         font-size: 1rem;
     }
 }
 
-.recipe{
-    &__img{
+.recipe {
+    &__img {
         background-color: #C7BEBE;
         height: 13rem;
         width: 100%;
     }
-    &__body{
+    &__body {
         background-color: #E7E7E7;
         padding: 0.5rem !important;
         min-width: 100%;
     }
-    &__time{
-        font-size:0.9rem;
-        & p{
+    &__time {
+        font-size: 0.9rem;
+        & p {
             font-weight: bold;
         }
         & i {
-            margin-top:0.2rem;  
-            margin-right: 0.3rem;          
+            margin-top: 0.2rem;
+            margin-right: 0.3rem;
         }
     }
-    &__bottomBox{
+    &__bottomBox {
         width: 100%;
     }
-    &__ingredients{
+    &__ingredients {
         width: 50%;
         margin: 0;
-
-        & p{
+        & p {
             font-size: 0.6rem;
             margin: 0;
-            & span{
+            & span {
                 font-weight: bolder;
             }
         }
     }
-    &__description{
+    &__description {
         font-size: 0.6rem;
         width: 50%;
         height: 5.4rem;
         margin: 0;
         display: -webkit-box;
         -webkit-line-clamp: 6;
-        -webkit-box-orient: vertical;  
+        -webkit-box-orient: vertical;
         overflow: hidden;
     }
 }
