@@ -17,12 +17,10 @@ let ingredients = [];
 let ustensils = [];
 let appliances = [];
 
-
-
 btnOpenFilter1.addEventListener("click", function() {
     btnOpenFilter1.style.display = "none";
     containBtnOpen1.style.display = "flex";
-    ingredientsBox.style.display = "block";
+    ingredientsBox.style.display = "grid";
     ingredientFilter = "Ingredients";
     itemList(ingredients, ingredientFilter, ingredientsBox);
 });
@@ -30,7 +28,7 @@ btnOpenFilter1.addEventListener("click", function() {
 btnOpenFilter2.addEventListener("click", function() {
     btnOpenFilter2.style.display = "none";
     containBtnOpen2.style.display = "flex";
-    ustensilsBox.style.display = "block";
+    ustensilsBox.style.display = "grid";
     ustensilsFilter = "Ustensiles";
     itemList(ustensils, ustensilsFilter, ustensilsBox);
 });
@@ -38,7 +36,7 @@ btnOpenFilter2.addEventListener("click", function() {
 btnOpenFilter3.addEventListener("click", function() {
     btnOpenFilter3.style.display = "none";
     containBtnOpen3.style.display = "flex";
-    applianceBox.style.display = "block";
+    applianceBox.style.display = "grid";
     applianceFilter = "Appareils";
     itemList(appliances, applianceFilter, applianceBox);
 });
@@ -117,6 +115,7 @@ const itemList = (data, filter, boxHtml) => {
                 data.push(ingredient.ingredient.toLowerCase());
             })
         })
+
     } else if (data.length == 0 && filter == "Ustensiles") {
         allRecipes.recipes.forEach((recipe) => {
             recipe.ustensils.forEach((ustensil) => {
@@ -130,49 +129,47 @@ const itemList = (data, filter, boxHtml) => {
         });
     }
 
-    data.filter(function(ele, pos) {
-        return data.indexOf(ele) == pos;
+    data = data.filter((ele, pos) => {
+        return data.indexOf(ele.toLowerCase()) == pos;
     });
+
 
     data.forEach((element) => {
+        element = element.charAt(0).toUpperCase() + element.slice(1);
         let elementText = document.createElement("a");
         elementText.textContent = element;
+        elementText.style.height = "1.5 rem"
+        elementText.style.width = "max-content"
         boxHtml.appendChild(elementText);
     });
-
 };
 
 const filterTexts = (nameFilter, input) => {
     console.log(nameFilter);
     if (nameFilter === "Ingredients") {
+
         ingredients = ingredients.filter((ingredient) => {
-            let inputTest = ingredient.indexOf(input.value) > -1;
+            let inputTest = ingredient.toLowerCase().indexOf(input.value) > -1;
             return inputTest == true;
         });
-        ingredients = ingredients.filter(function(ele, pos) {
-            return ingredients.indexOf(ele) == pos;
-        });
+
         console.log(ingredients);
         itemList(ingredients, nameFilter, ingredientsBox);
     } else if (nameFilter === "Ustensiles") {
         ustensils = ustensils.filter((ustensil) => {
-            let inputTest = ustensil.indexOf(input.value) > -1;
+            let inputTest = ustensil.toLowerCase().indexOf(input.value) > -1;
             return inputTest == true;
         });
-        ustensils = ustensils.filter(function(ele, pos) {
-            return ustensils.indexOf(ele) == pos;
-        });
+
         console.log(ustensils);
         itemList(ustensils, nameFilter, ustensilsBox);
     } else if (nameFilter === "Appareils") {
         appliances = appliances.filter((appliance) => {
             console.log(appliance)
-            let inputTest = appliance.indexOf(input.value) > -1;
+            let inputTest = appliance.toLowerCase().indexOf(input.value) > -1;
             return inputTest == true;
         });
-        appliances = appliances.filter(function(ele, pos) {
-            return appliances.indexOf(ele) == pos;
-        });
+
         console.log(appliances);
         itemList(appliances, nameFilter, applianceBox);
     }

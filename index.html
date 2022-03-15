@@ -23,54 +23,54 @@
     </header>
     <nav>
         <form class="formSearch form-inline position-relative d-block">
-            <input type="text" class="formSearch__input" placeholder="Rechercher un recette" />
+            <input type="text" class="formSearch__input" placeholder="Rechercher un recette">
         </form>
         <div id="filter">
-            <div class="filterBox btn" id="filter1">
+            <div class="filterBox btn d-flex align-items-center" id="filter1">
                 <a class="filterBox__btnIsClosed openBtn1 align-items-center">
                     <p class="my-0 ingredientsFilterText">Ingredients</p>
-                    <i class="fas fa-angle-down filterBox__icon ml-2"></i>
+                    <i class="fas fa-angle-down filterBox__icon mx-2"></i>
                 </a>
-                <div>
+                <div class="filterBox__boxOpen">
                     <div class="filterBox__btnIsOpen1  filterBox__btnIsOpen">
-                        <input type=" text " placeholder="Rechercher un ingrédient " class="inputFilter1 ">
+                        <input type="text" placeholder="Rechercher un ingrédient" class="inputFilter1">
                         <a class="closeBtn closeBtn1">
-                            <i class="fas fa-angle-up filterBox__icon "></i>
+                            <i class="fas fa-angle-up filterBox__icon mx-2"></i>
                         </a>
                     </div>
-                    <div class="ingredientsBox ">
+                    <div class="ingredientsBox filterBox__items">
                     </div>
                 </div>
             </div>
-            <div class="filterBox btn" id="filter2">
+            <div class="filterBox btn d-flex align-items-center" id="filter2">
                 <a class="filterBox__btnIsClosed openBtn2 align-items-center">
                     <p class="my-0 ustensilsFilterText">Ustensiles</p>
-                    <i class="fas fa-angle-down filterBox__icon ml-2"></i>
+                    <i class="fas fa-angle-down filterBox__icon mx-2"></i>
                 </a>
                 <div>
                     <div class="filterBox__btnIsOpen2 filterBox__btnIsOpen">
                         <input type=" text" placeholder="Rechercher un ustensile" class="inputFilter2">
-                        <a class="closeBtn closeBtn2">
+                        <a class="closeBtn closeBtn2 mx-2">
                             <i class="fas fa-angle-up filterBox__icon"></i>
                         </a>
                     </div>
-                    <div class="ustensilsBox">
+                    <div class="ustensilsBox filterBox__items">
                     </div>
                 </div>
             </div>
-            <div class="filterBox btn" id="filter3">
+            <div class="filterBox btn d-flex align-items-center" id="filter3">
                 <a class="filterBox__btnIsClosed openBtn3 align-items-center">
                     <p class="my-0 applianceFilterText">Appareils</p>
-                    <i class="fas fa-angle-down filterBox__icon ml-2"></i>
+                    <i class="fas fa-angle-down filterBox__icon mx-2"></i>
                 </a>
                 <div>
                     <div class="filterBox__btnIsOpen3 filterBox__btnIsOpen">
                         <input type=" text" placeholder="Rechercher un appareil" class="inputFilter3">
                         <a class="closeBtn closeBtn3">
-                            <i class="fas fa-angle-up filterBox__icon"></i>
+                            <i class="fas fa-angle-up filterBox__icon mx-2"></i>
                         </a>
                     </div>
-                    <div class="applianceBox">
+                    <div class="applianceBox filterBox__items">
                     </div>
                 </div>
             </div>
