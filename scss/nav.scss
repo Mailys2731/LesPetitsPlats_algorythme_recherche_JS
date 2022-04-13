@@ -1,93 +1,128 @@
-    .formSearch {
-        &__input {
-            padding-right: 26px;
-            width: 100%;
-            background-color: #E7E7E7;
-            border: none;
-            border-radius: 5px;
-            height: 3rem;
-            color: #000000;
-            opacity: 0.50;
-            padding-left: 0.5rem;
-            & ::placeholder {
-                font-family: 'Lato', sans-serif;
-                font-size: 18px;
-            }
-        }
-        &:after {
-            content: '';
-            width: 20px;
-            height: 20px;
-            background-image: url("../Search\ Icon.svg");
-            position: absolute;
-            top: 50%;
-            bottom: 50%;
-            transform: translateY(-50%);
-            right: 8px;
-            z-index: 1000;
+.formSearch {
+    &__input {
+        padding-right: 26px;
+        width: 100%;
+        background-color: #e7e7e7;
+        border: none;
+        border-radius: 5px;
+        height: 3rem;
+        color: #000000;
+        opacity: 0.5;
+        padding-left: 0.5rem;
+        & ::placeholder {
+            font-family: "Lato", sans-serif;
+            font-size: 18px;
         }
     }
-    
-    #filter {
+    &:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("../Search\ Icon.svg");
         position: absolute;
-        display: flex;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+        right: 8px;
         z-index: 1000;
-        margin: 1rem 0 1rem 0;
+    }
+}
+
+#filter {
+    position: absolute;
+    display: flex;
+    z-index: 1000;
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+}
+
+#filter1 {
+    background-color: #3282f7;
+}
+
+#filter2 {
+    background-color: #68d9a4;
+}
+
+#filter3 {
+    background-color: #ed6454;
+}
+
+.filterBox {
+    width: 8rem;
+    min-width: max-content;
+    height: max-content;
+    min-height: 3rem;
+    color: white !important;
+    margin: 0.5rem;
+    &__btnIsClosed {
         width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
-    
-    #filter1 {
-        background-color: #3282F7;
+    & a {
+        display: flex;
     }
-    
-    #filter2 {
-        background-color: #68D9A4;
-    }
-    
-    #filter3 {
-        background-color: #ED6454;
-    }
-    
-    .filterBox {
-        width: 8rem;
-        min-width: max-content;
-        height: max-content;
-        min-height: 3rem;
-        color: white !important;
-        margin: 0.5rem;
-        &__btnIsClosed {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
+    &__btnIsOpen {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            border: none;
+            background: none;
+            color: #ffffff;
         }
-        & a {
-            display: flex;
+         ::placeholder {
+            color: #ffffff !important;
+            opacity: 0.75;
         }
-        &__btnIsOpen {
-            display: none;
-            justify-content: space-between;
-            align-items: center;
-            input {
-                border: none;
-                background: none;
-                color: #ffffff;
-            }
-             ::placeholder {
-                color: #ffffff !important;
-                opacity: 0.75;
-            }
-             :focus {
-                outline: none;
-            }
+         :focus {
+            outline: none;
         }
     }
-    
-    .filterBox__items {
-        display: grid;
-        grid: auto-flow dense / 50% 50%;
-        width: 100%;
-        & a {
-            text-align: left;
-            margin: 0 0.5rem 0 0.5rem;
+}
+
+.filterBox__items {
+    display: grid;
+    grid: auto-flow dense / 50% 50%;
+    width: 100%;
+    & a {
+        text-align: left;
+        margin: 0 0.5rem 0 0.5rem;
+    }
+}
+
+.keyWord {
+    width: max-content;
+    height: max-content;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    align-items: center;
+    border-radius: 5px;
+    & p {
+        color: white;
+        margin-bottom: 0px;
+        font-size: 0.8rem;
+    }
+    & a {
+        padding-left: 0.8rem;
+        padding-right: 0.6rem;
+        font-size: 0.8rem;
+        & i {
+            color: white;
+            cursor: pointer;
         }
     }
+}
+
+.ingredientsColor {
+    background-color: #3282f7;
+}
+
+.ustensilsColor {
+    background-color: #68d9a4;
+}
+
+.appliancesColor {
+    background-color: #ed6454;
+}
