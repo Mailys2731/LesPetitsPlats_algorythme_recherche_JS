@@ -9,11 +9,10 @@ async function getRecipes() {
             return httpBodyResponse.json()
         })
 
-        .then(function (recipes) {
-            allRecipes = recipes
-            console.log(allRecipes)
+        .then(function (response) {
+            allRecipes = response
+            return response
         })
-
         .catch(function (error) {
             console.log(error)
             return []
