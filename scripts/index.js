@@ -7,9 +7,10 @@ async function getRecipes() {
         return httpBodyResponse.json()
     })
 
-    .then(function(recipes) {
-        allRecipes = recipes
+    .then(function(response) {
+        allRecipes = response
         console.log(allRecipes)
+        return allRecipes
     })
 
     .catch(function(error) {
