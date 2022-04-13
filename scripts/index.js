@@ -1,4 +1,4 @@
-let allRecipes
+let allRecipes= []
 let datas = ""
 
 
@@ -22,6 +22,8 @@ async function getRecipes() {
 
 
 function displayRecipes() {
+    console.log(allRecipes.recipes)
+
     // eslint-disable-next-line
     if (newAllRecipes !== 0) {
         // eslint-disable-next-line
