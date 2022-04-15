@@ -1,7 +1,7 @@
 let allRecipes
 
 async function getRecipes() {
-    return fetch(window.location.href + "/recipes.json")
+    return fetch(window.location.href.replace("/index.html", "") + "/recipes.json")
 
     .then(function(httpBodyResponse) {
         return httpBodyResponse.json()
