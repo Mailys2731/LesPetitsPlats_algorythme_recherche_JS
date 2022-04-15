@@ -1,7 +1,7 @@
 let allRecipes
 
 async function getRecipes() {
-    return fetch("../recipes.json")
+    return fetch("./recipes.json")
 
     .then(function(httpBodyResponse) {
         return httpBodyResponse.json()
