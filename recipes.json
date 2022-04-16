@@ -1,11 +1,9 @@
 {
-    "recipes": [
-        {
+    "recipes": [{
             "id": 1,
             "name": "Limonade de Coco",
             "servings": 1,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Lait de coco",
                     "quantity": 400,
                     "unit": "ml"
@@ -37,8 +35,7 @@
             "id": 2,
             "name": "Poisson Cru à la tahitienne",
             "servings": 2,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Thon Rouge (ou blanc)",
                     "quantity": 200,
                     "unit": "grammes"
@@ -73,8 +70,7 @@
             "id": 3,
             "name": "Poulet coco réunionnais",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Poulet",
                     "quantity": 1
                 },
@@ -110,8 +106,7 @@
             "id": 4,
             "name": "Salade de riz",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Riz blanc",
                     "quantity": 500,
                     "unit": "grammes"
@@ -148,8 +143,7 @@
             "id": 5,
             "name": "Tarte au thon",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pâte feuilletée",
                     "quantity": 1
                 },
@@ -187,8 +181,7 @@
             "id": 6,
             "name": "Tarte aux pommes",
             "servings": 6,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pâte brisée",
                     "quantity": 1
                 },
@@ -225,8 +218,7 @@
             "id": 7,
             "name": "Tartelettes au chocolat et aux fraises",
             "servings": 6,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pâte sablée",
                     "quantity": 1
                 },
@@ -253,13 +245,12 @@
             "time": 50,
             "description": "Etaler la pate dans les moules à tartelette. Faire cuire la pate 30 minutes. Découper le chocolat en morceau et le faire chauffer, y ajouter la crême liquide, ajouter le beurre et remuer jusqu'à avoir une pâte homogène. Verser la pate sur les tartelettes. Couper les fraises en 2 et les positionner sur ",
             "appliance": "Four",
-            "ustensils": ["moule à tartelettes (6)", "casserolle"]
+            "ustensils": ["moule à tartelettes (6)", "casserole"]
         }, {
             "id": 8,
             "name": "Brownie",
             "servings": 10,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Noix",
                     "quantity": "180",
                     "unit": "grammes"
@@ -293,14 +284,13 @@
             "time": 60,
             "description": "Hachez les noix grossièrement. Faire fondre le chocolat avec le beurre. Mélanger les oeuf et le sucre et mélanger au chocolat. Ajouter la farine. Mélanger afin d'avoir quelque chose d'homogène puis incorporer les noix. Verser la préparation dans un moule de préférence rectangulaire. Cuire 2O à 25 minutes à 180°. Sortez du four et attendez quelques minutes pour démouler. Servir avec une boule de glace pour plus de gourmandise.",
             "appliance": "Four",
-            "ustensils": ["moule à gateaux", "casserolle"]
+            "ustensils": ["moule à gateaux", "casserole"]
         },
         {
             "id": 9,
             "name": "Salade Méditerannéene fraiche au chèvre",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Concombre",
                     "quantity": 1
                 },
@@ -331,8 +321,7 @@
             "id": 10,
             "name": "Tartiflette",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Roblochon",
                     "quantity": "1"
                 },
@@ -365,8 +354,7 @@
             "id": 11,
             "name": "Salade tomate, mozzarella et pommes",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Tomates cerises",
                     "quantity": 250,
                     "unit": "grammes"
@@ -403,8 +391,7 @@
             "id": 12,
             "name": "Compote pomme rhubarbe",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Rhubarbe",
                     "quantity": 160,
                     "unit": "grammes"
@@ -425,7 +412,7 @@
                 }
             ],
             "time": 40,
-            "description": "Éplucher les fruits et les couper en morceaux, les mettre dans une casserolle en ajoutant l'eau et le sucre vanillé. Laisser cuire 15 minutes en remuant régulièrement.",
+            "description": "Éplucher les fruits et les couper en morceaux, les mettre dans une casserole en ajoutant l'eau et le sucre vanillé. Laisser cuire 15 minutes en remuant régulièrement.",
             "appliance": "Casserole",
             "ustensils": ["couteau", "économe"]
         },
@@ -433,8 +420,7 @@
             "id": 13,
             "name": "Salade mâchée de patates",
             "servings": 2,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Mâche",
                     "quantity": 60,
                     "unit": "grammes"
@@ -469,8 +455,7 @@
             "id": 14,
             "name": "Galette Bretonne Saucisse et Fromage à raclette",
             "servings": 2,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Saucisse bretonne ou de toulouse",
                     "quantity": 2
                 },
@@ -509,8 +494,7 @@
             "id": 15,
             "name": "Crêpes Chocolat Banane",
             "servings": 10,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Oeuf",
                     "quantity": 3
                 },
@@ -548,8 +532,7 @@
             "id": 16,
             "name": "Gratin de pâtes à la tomate",
             "servings": 2,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Tomate",
                     "quantity": 500,
                     "unit": "grammes"
@@ -584,8 +567,7 @@
             "id": 17,
             "name": "Smoothie à la fraise",
             "servings": 6,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Fraise",
                     "quantity": 500,
                     "unit": "grammes"
@@ -616,8 +598,7 @@
             "id": 18,
             "name": "Smoothie ananas et vanille",
             "servings": 5,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Ananas",
                     "quantity": 1
                 },
@@ -641,8 +622,7 @@
             "id": 19,
             "name": "Shake Banane Kiwi",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Kiwi",
                     "quantity": 4
                 },
@@ -674,8 +654,7 @@
             "id": 20,
             "name": "Pates Carbonara",
             "servings": 5,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Tagliatelles",
                     "quantity": 500,
                     "unit": "grammes"
@@ -710,8 +689,7 @@
             "id": 21,
             "name": "Spaghettis à la bolognaise",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Spaghettis",
                     "quantity": 400,
                     "unit": "grammes"
@@ -743,15 +721,14 @@
             ],
             "time": 30,
             "description": "Cuisiner la viande hachée dans une poelle à frire. Dans une autre faire cuire les oignons découpés en fins dés avec un peu de beurre. Ajouter du vin rouge. Mélanger les oigons avec la viande hachée. Faire cuire les pates le temps indiqué sur le paquet. Ajouter le coulis de tomates à la viande hachée. Une fois que les pates sont cuites, ajouter la crème fraiche à la viande hachée. Serivir.",
-            "appliance": "Casserolle.",
+            "appliance": "casserole.",
             "ustensils": ["Cuillère en bois", "louche", "couteau"]
         },
         {
             "id": 22,
             "name": "Fondant au chocolat",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Beurre",
                     "quantity": 160,
                     "unit": "grammes"
@@ -779,14 +756,13 @@
             "time": 30,
             "description": "Faire fondre le chocolat et le beurre au bain marie. Dans un saladier battre les oeufs avec le sucre jusqu'à obtenir une texture de type mousse. Ajouter la farine ainsi que le mélange de beurre et chocolat fondu. Beurrez le moule à gateaux. Mettre au four préchauffé à 200° puis faites chauffer pendant 15 minutes. C'est prêt. Servir avec une boule de glace ou une crême dessert.",
             "appliance": "Four",
-            "ustensils": ["moule à gateaux", "fouet", "casserolle"]
+            "ustensils": ["moule à gateaux", "fouet", "casserole"]
         },
         {
             "id": 23,
             "name": "Quiche lorraine",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pâte brisée",
                     "quantity": 200,
                     "unit": "grammes"
@@ -825,8 +801,7 @@
             "id": 24,
             "name": "Salade de pâtes",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Thon en miettes",
                     "quantity": 160,
                     "unit": "grammes"
@@ -864,8 +839,7 @@
             "id": 25,
             "name": "Cookies",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Sucre",
                     "quantity": 100,
                     "unit": "grammes"
@@ -899,8 +873,7 @@
             "id": 26,
             "name": "Soupe de tomates",
             "servings": 2,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Tomate",
                     "quantity": 6
                 },
@@ -930,8 +903,7 @@
             "id": 27,
             "name": "Soupe à l'oseille",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Oseille",
                     "quantity": 2
                 },
@@ -957,15 +929,14 @@
             ],
             "time": 15,
             "description": "Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crême fraîche",
-            "appliance": "Casserolle",
+            "appliance": "casserole",
             "ustensils": ["couteau", "cuillère en bois"]
         },
         {
             "id": 28,
             "name": "Soupe de poireaux",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Poireau",
                     "quantity": 3
                 },
@@ -993,14 +964,13 @@
             "time": 80,
             "description": "Emincer les blanc de poireaux et les faire chauffer dans 25 grammes de beurre. AJouter les pommes de terres coupées en morceaux. Ajouter l'eau et laisser mijoter pour 45 minutes. Chauffer l'oseille avec le beurre restant puis incorporer le tout. Mixez. Ajoutez la crème. Bon appetit.",
             "appliance": "Mixer",
-            "ustensils": ["casserolle", "couteau"]
+            "ustensils": ["casserole", "couteau"]
         },
         {
             "id": 29,
             "name": "Houmous Express",
             "servings": 2,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pois chiches",
                     "quantity": 1,
                     "unit": "boites"
@@ -1030,8 +1000,7 @@
             "id": 30,
             "name": "Purée de pois cassés",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pois Cassé",
                     "quantity": 500,
                     "unit": "grammes"
@@ -1049,14 +1018,13 @@
             "time": 60,
             "description": "Mettre tous les ingrédients dans une cocotte. ajouter de l'eau pour recouvrir l'ensemble et laisser cuirre à petit feur pour 1 heure. Passer au mixer. Salez, poivrez. C'est prêt",
             "appliance": "Mixer",
-            "ustensils": ["casserolle", "cuillère en bois"]
+            "ustensils": ["casserole", "cuillère en bois"]
         },
         {
             "id": 31,
             "name": "Jardinière de légumes",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Carotte",
                     "quantity": 2
                 },
@@ -1089,8 +1057,7 @@
             "id": 32,
             "name": "Croque Monsieur à la dinde",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pain de mie",
                     "quantity": 8,
                     "unit": "tranches"
@@ -1130,8 +1097,7 @@
             "id": 33,
             "name": "Sandwich au saumon fumé",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pain de mie",
                     "quantity": 8,
                     "unit": "tranches"
@@ -1165,8 +1131,7 @@
             "id": 34,
             "name": "Purée de patate douce",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Patate douce",
                     "quantity": 800,
                     "unit": "grammes"
@@ -1185,7 +1150,7 @@
                 }
             ],
             "time": 25,
-            "description": "Eplucher les patates douces et coupez les en morceaux. Les faire cuire durant 20 minute dans une casserolle d'eau bouillante. Passer au mixer en ajoutant la crème et l'huile d'olive à son gout. Salez, poivrez. Pressez l'orange et ajouter le jus à l'ensemble. Servir.",
+            "description": "Eplucher les patates douces et coupez les en morceaux. Les faire cuire durant 20 minute dans une casserole d'eau bouillante. Passer au mixer en ajoutant la crème et l'huile d'olive à son gout. Salez, poivrez. Pressez l'orange et ajouter le jus à l'ensemble. Servir.",
             "appliance": "Mixer",
             "ustensils": ["couteau", "économe", "cuillère en bois"]
         },
@@ -1193,8 +1158,7 @@
             "id": 35,
             "name": "Purée de carottes",
             "servings": 2,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Carotte",
                     "quantity": 6
                 },
@@ -1232,8 +1196,7 @@
             "id": 36,
             "name": "Lasagne Courgettes et Chèvre",
             "servings": 2,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Courgette",
                     "quantity": 2
                 },
@@ -1271,8 +1234,7 @@
             "id": 37,
             "name": "Courgettes farcies au boeuf",
             "servings": 2,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Courgette",
                     "quantity": 2
                 },
@@ -1311,8 +1273,7 @@
             "id": 38,
             "name": "Pain Perdu",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pain",
                     "quantity": 6,
                     "unit": "tranches"
@@ -1341,8 +1302,7 @@
             "id": 39,
             "name": "Crumble aux pommes",
             "servings": 40,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pomme",
                     "quantity": 2
                 },
@@ -1371,8 +1331,7 @@
             "id": 40,
             "name": "Limonade",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Eau",
                     "quantity": 1,
                     "unit": "Litres"
@@ -1401,8 +1360,7 @@
             "id": 41,
             "name": "Mousse au chocolat",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Oeuf",
                     "quantity": 3
                 },
@@ -1419,15 +1377,14 @@
             ],
             "time": 20,
             "description": "Séparer les blancs d'oeufs. Faire fondre le chocolat au bain marie. Ajouter les jaunes et le sucre au chocolat hors du feu. Battre les blancs en neige. Ajouter les blancs au mélange de chocolat. Mélangez délicatement avec une spatule. Servir dans un plat ou dans des verres. Mettre au frais",
-            "appliance": "Casserolle",
+            "appliance": "casserole",
             "ustensils": ["fouet", "spatule", "verres"]
         },
         {
             "id": 42,
             "name": "Charlotte au poires",
             "servings": 3,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Chocolat",
                     "quantity": 200,
                     "unit": "grammes"
@@ -1455,8 +1412,7 @@
             "id": 43,
             "name": "Tarte au citron",
             "servings": 6,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pâte brisée",
                     "quantity": 200,
                     "unit": "grammes"
@@ -1488,8 +1444,7 @@
             "id": 44,
             "name": "Crème déssert au chocolat",
             "servings": 6,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Lait",
                     "quantity": 1,
                     "unit": "litres"
@@ -1517,15 +1472,14 @@
             ],
             "time": 15,
             "description": "Mélanger la farine et le beurre fondu en ajoutant le lait peu à peu. Ajouter du sucre après la cuisson. Bien mélanger. Ajouter le chocolat en morceaux et laisser chauffer 8 minutes en mélangeant avec une cuillère en bois. Mettre dans des verres",
-            "appliance": "Casserolle",
+            "appliance": "casserole",
             "ustensils": ["cuillère en bois"]
         },
         {
             "id": 45,
             "name": "Crème patissière",
             "servings": 8,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Lait",
                     "quantity": 50,
                     "unit": "cl"
@@ -1547,15 +1501,14 @@
             ],
             "time": 30,
             "description": "Faire bouillir le lait ( on peut y ajouter de l'essence de vanille. Battre les oeufs et le sucre, ajouter la farine puis finalement ajouter le lait chaud. Remettre à feu doux pour faire épaissir en remuant pendant 5 à 10 minutes.",
-            "appliance": "Casserolle",
+            "appliance": "casserole",
             "ustensils": ["fouet", "saladier"]
         },
         {
             "id": 46,
             "name": "Far breton",
             "servings": 6,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Farine",
                     "quantity": 250,
                     "unit": "grammes"
@@ -1594,8 +1547,7 @@
             "id": 47,
             "name": "Mousse au citron",
             "servings": 6,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Jus de citron",
                     "quantity": 100,
                     "unit": "grammes"
@@ -1625,8 +1577,7 @@
             "id": 48,
             "name": "Pizza",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pâte à pizza",
                     "quantity": 1
                 },
@@ -1660,8 +1611,7 @@
             "id": 49,
             "name": "Smoothie tropical",
             "servings": 4,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Bananes",
                     "quantity": 2
                 },
@@ -1693,8 +1643,7 @@
             "id": 50,
             "name": "Frangipane",
             "servings": 2,
-            "ingredients": [
-                {
+            "ingredients": [{
                     "ingredient": "Pâte feuilletée",
                     "quantity": 400,
                     "unit": "grammes"

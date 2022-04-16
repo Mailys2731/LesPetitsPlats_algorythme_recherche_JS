@@ -1,15 +1,16 @@
 let allRecipes
 
 async function getRecipes() {
-    return fetch("../recipes.json")
+    return fetch(window.location.href.replace("/index.html", "") + "/recipes.json")
 
     .then(function(httpBodyResponse) {
         return httpBodyResponse.json()
     })
 
-    .then(function(recipes) {
-        allRecipes = recipes
+    .then(function(response) {
+        allRecipes = response
         console.log(allRecipes)
+        return allRecipes
     })
 
     .catch(function(error) {
@@ -24,13 +25,12 @@ function displayRecipes() {
     let datas = ""
     console.log(newAllRecipes)
     if (newAllRecipes !== 0) {
-        console.log("hey")
         datas = newAllRecipes
     } else { datas = allRecipes.recipes }
     document.getElementById("recipes").innerHTML = ""
     datas.forEach(data => {
         const recipeCard = new Recipe(data)
-        const displayRecipes = recipeCard.renderCardRecipe()
+        recipeCard.renderCardRecipe()
 
     });
     console.log("recettes actualisées")
