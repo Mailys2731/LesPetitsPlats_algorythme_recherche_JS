@@ -9,7 +9,6 @@ let nbStrings = Number
 const countStringsInput = (input) => {
     let inputValue = input.value
     nbStrings = inputValue.length
-    console.log(nbStrings)
 }
 
 /**
@@ -19,7 +18,6 @@ const countStringsInput = (input) => {
 inputSearch.addEventListener("keyup", function() {
     countStringsInput(inputSearch)
     if (nbStrings >= 3) {
-        console.log("je filtre")
         var t0 = performance.now();
         filter()
         var t1 = performance.now();
@@ -28,7 +26,6 @@ inputSearch.addEventListener("keyup", function() {
         // eslint-disable-next-line
         filterRecipes()
     } else {
-        console.log("je ne fais rien")
         // eslint-disable-next-line
         newAllRecipes = allRecipes.recipes
         // eslint-disable-next-line
@@ -49,9 +46,15 @@ const filter = () => {
         let inputTest = stringRecipeLowerCase.indexOf(inputSearch.value) > -1
         return inputTest == true
     });
-    console.log(newAllRecipes)
-    console.log("fonction")
+    if(newAllRecipes.length === 0){
+        document.querySelector(".noMatchRecipeBox").style.display = "flex"
+    }
+    else{
+        document.querySelector(".noMatchRecipeBox").style.display = "none"
+
+    }
     // eslint-disable-next-line
     displayRecipes()
+   
     return newAllRecipes
 }

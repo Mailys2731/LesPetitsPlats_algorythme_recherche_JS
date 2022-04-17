@@ -404,6 +404,7 @@ const removeKeyWord = (type) => {
             }
             // eslint-disable-next-line
             filter()
+            console.log(newAllRecipes)
             filterRecipes()
         })
     })
@@ -415,7 +416,6 @@ const removeKeyWord = (type) => {
 
 const filterRecipes = () => {
     // eslint-disable-next-line
-    console.log(newAllRecipes)
     filters.forEach(filter => {
         if (filter.type == "ingredient") {
             // eslint-disable-next-line
@@ -441,8 +441,15 @@ const filterRecipes = () => {
                 inputTest = JSON.stringify(recipe.appliance).toLocaleLowerCase().indexOf(filter.name.toLocaleLowerCase()) > -1
                 return inputTest == true
             })
-        }
+        }    
     })
+    if(newAllRecipes.length === 0){
+        document.querySelector(".noMatchRecipeBox").style.display = "flex"
+    }
+    else{
+        document.querySelector(".noMatchRecipeBox").style.display = "none"
+
+    }
     // eslint-disable-next-line
     displayRecipes()
 }

@@ -1,24 +1,23 @@
 const inputSearch = document.querySelector(".formSearch__input")
-let inputString = String
-let nb_characters = Number
+let nbStrings = Number
 let newAllRecipes = 0
 
 
-const getSearchString = () => {
-    let inputValue = inputSearch.value
-    inputString = inputValue
-    nb_characters = inputValue.length
-    console.log(inputValue.length)
+const countStringsInput = (input) => {
+    let inputValue = input.value
+    nbStrings = inputValue.length
 }
 
 inputSearch.addEventListener("keyup", function() {
-    getSearchString()
-    if (nb_characters >= 3) {
-        console.log("je filtre")
+    countStringsInput(inputSearch)
+
+    if (nbStrings >= 3) {
         var t0 = performance.now();
         filter()
         var t1 = performance.now();
         console.log("L'appel de filter a demandé " + (t1 - t0) + " millisecondes.")
+        // eslint-disable-next-line
+        filterRecipes()
     } else {
          // eslint-disable-next-line
          newAllRecipes = allRecipes.recipes
@@ -29,18 +28,37 @@ inputSearch.addEventListener("keyup", function() {
 })
 
 const filter = () => {
+    console.log(inputSearch.value)
     newAllRecipes = []
-    // eslint-disable-next-line
-    for (recipe of allRecipes.recipes) {
-        let stringRecipe = JSON.stringify(recipe)
-        let stringRecipeLowerCase = stringRecipe.toLowerCase()
-        let inputTest = stringRecipeLowerCase.indexOf(inputString) > -1
-        if (inputTest == true) {
-            newAllRecipes.push(recipe)
+    if(inputSearch.value === ""){
+        newAllRecipes = allRecipes.recipes
+    }
+    else{
+        console.log('eee')
+        for (recipe of allRecipes.recipes) {
+            let stringRecipe = JSON.stringify(recipe)
+            let stringRecipeLowerCase = stringRecipe.toLowerCase()
+            
+            let inputTest = stringRecipeLowerCase.indexOf(inputSearch.value) > -1
+            console.log(inputTest)
+            if (inputTest == true) {
+                //let i = newAllRecipes.findIndex((element) => element === recipe)
+                //console.log(i)
+                newAllRecipes.push(recipe)
+            }
+        
         }
     }
-    console.log(newAllRecipes)
+    if(newAllRecipes.length === 0){
+        document.querySelector(".noMatchRecipeBox").style.display = "flex"
+    }
+    else{
+        document.querySelector(".noMatchRecipeBox").style.display = "none"
+
+    }
+    
     // eslint-disable-next-line
-    displayRecipes()
     console.log(newAllRecipes)
+    displayRecipes()
+    return newAllRecipes
 }

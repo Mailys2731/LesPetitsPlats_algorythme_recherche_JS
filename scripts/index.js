@@ -9,7 +9,6 @@ async function getRecipes() {
 
     .then(function(response) {
         allRecipes = response
-        console.log(allRecipes)
         return allRecipes
     })
 
@@ -21,7 +20,6 @@ async function getRecipes() {
 
 function displayRecipes() {
     let datas = ""
-    console.log(newAllRecipes)
     if (newAllRecipes !== 0) {
         datas = newAllRecipes
     } else { datas = allRecipes.recipes }
