@@ -19,8 +19,6 @@ async function getRecipes() {
     })
 }
 
-
-
 function displayRecipes() {
     let datas = ""
     console.log(newAllRecipes)

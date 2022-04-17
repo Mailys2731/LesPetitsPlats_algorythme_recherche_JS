@@ -19,6 +19,10 @@ let appliances = [];
 let filters = [];
 let filtersLinks = [];
 
+/**
+ * AddEventListeners booutons ouverture filtres ingrédients ||ustensiles || appareils
+ */
+
 btnOpenFilter1.addEventListener("click", function () {
     btnOpenFilter1.style.display = "none";
     containBtnOpen1.style.display = "flex";
@@ -44,6 +48,10 @@ btnOpenFilter3.addEventListener("click", function () {
     itemList(appliances, applianceFilter, appliancesBox);
 });
 
+/**
+ * AddEnventListeners boutons croix pour fermer un filtre ingrédients ||ustensiles || appareils
+ */
+
 btnClosedFilter1.addEventListener("click", function () {
     btnOpenFilter1.style.display = "flex";
     containBtnOpen1.style.display = "none";
@@ -62,6 +70,10 @@ btnClosedFilter3.addEventListener("click", function () {
     appliancesBox.style.display = "none";
     appliances = [];
 });
+
+/**
+ * AddEventListeners barres de recherche filtres ingrédients ||ustensiles || appareils
+ */
 
 inputIngredients.addEventListener("keyup", function () {
     // eslint-disable-next-line
@@ -104,6 +116,16 @@ inputAppliance.addEventListener("keyup", function () {
         displayFilters(applianceFilter, inputAppliance);
     }
 });
+
+
+/**
+ * Fonction qui génère la liste du filtre concerné et affiche les éléments
+ * @param {Array} data Tableau des ingredients || ustensiles || appareils
+ * @param {String} filter Nom du filtre
+ * @param {HTMLElement} boxHtml - The selector html.
+ * @returns {HTMLElement, Array}
+ 
+ */
 
 const itemList = (data, filter, boxHtml) => {
     boxHtml.innerHTML = "";
@@ -197,6 +219,12 @@ const itemList = (data, filter, boxHtml) => {
 
 };
 
+/**
+ * Fonction qui tri les filtres en fonction de l'entrée dans la barre de recherche du filtre
+ * @param {String} nameFilter 
+ * @param {HTMLElement} input barre de recherche
+ */
+
 const displayFilters = (nameFilter, input) => {
     if (nameFilter === "Ingredients") {
         console.log(ingredients)
@@ -222,6 +250,10 @@ const displayFilters = (nameFilter, input) => {
         itemList(appliances, nameFilter, appliancesBox);
     }
 };
+
+/**
+ * Fonction de filtrage
+ */
 
 
 const filterByItem = () => {
@@ -285,6 +317,10 @@ const filterByItem = () => {
     })
 }
 
+/**
+ * Fonction qui parcours les éléments de filtrage activés pour afficher les mots clés
+ */
+
 const renderKeyWords = () => {
     document.getElementById("boxKeyWord").innerHTML = ""
     console.log(filters)
@@ -292,6 +328,12 @@ const renderKeyWords = () => {
         renderKeyWord(filter.name, filter.type)
     })
 }
+
+/**
+ * Fonction qui génère un mot clé
+ * @param {String} title 
+ * @param {String} type 
+ */
 
 const renderKeyWord = (title, type) => {
     let color
@@ -316,6 +358,10 @@ const renderKeyWord = (title, type) => {
    `
 }
 
+/**
+ * Fonction de suppression d'un filtre grâce à la croix sur le mot clé
+ * @param {String} type 
+ */
 const removeKeyWord = (type) => {
     let removeKeyWordLinks = document.querySelectorAll(".keyWord__link")
     removeKeyWordLinks.forEach(keyWordLink => {
@@ -362,6 +408,10 @@ const removeKeyWord = (type) => {
         })
     })
 }
+
+/**
+ * Fonction qui filtres la liste des recettes en fonction des éléments de filtrage activés
+ */
 
 const filterRecipes = () => {
     // eslint-disable-next-line

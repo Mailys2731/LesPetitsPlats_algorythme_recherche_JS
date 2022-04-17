@@ -2,12 +2,19 @@ const inputSearch = document.querySelector(".formSearch__input")
 let newAllRecipes = 0
 let nbStrings = Number
 
-//Récupère le nombre de caractères entrés dans l'input
+/**
+ *Fonction qui récupère le nombre de caractères entrés dans l'input
+ * @param {HTMLElement} input input barre de recherche principale
+ */
 const countStringsInput = (input) => {
     let inputValue = input.value
     nbStrings = inputValue.length
     console.log(nbStrings)
 }
+
+/**
+ * AddEventListener de la barre de recherche principale
+ */
 
 inputSearch.addEventListener("keyup", function() {
     countStringsInput(inputSearch)
@@ -28,6 +35,11 @@ inputSearch.addEventListener("keyup", function() {
         filterRecipes()
     }
 })
+
+/**
+ * 
+ * @returns {Array} tableau des recettes filtré en fonction de l'entrée dfans la barre de recherche
+ */
 
 const filter = () => {
     // eslint-disable-next-line
