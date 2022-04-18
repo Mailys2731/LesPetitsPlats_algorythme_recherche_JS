@@ -49,7 +49,6 @@ btnOpenFilter3.addEventListener("click", function () {
     containBtnOpen3.style.display = "flex";
     appliancesBox.style.display = "grid";
     let applianceFilter = "Appareils";
-    console.log(appliances)
     itemList(appliances, applianceFilter, appliancesBox);
 });
 
@@ -137,8 +136,6 @@ const itemList = (data, filter, boxHtml) => {
     data = []
     if (filter == "Ingredients") {
         // eslint-disable-next-line
-        console.log(newAllRecipes)
-        // eslint-disable-next-line
         if (newAllRecipes !== 0) {
             // eslint-disable-next-line
             newAllRecipes.forEach((recipe) => {
@@ -146,7 +143,6 @@ const itemList = (data, filter, boxHtml) => {
                     data.push(ingredient.ingredient.toLowerCase());
                 })
             })
-            console.log(data)
         }
         else {
             // eslint-disable-next-line
@@ -193,14 +189,12 @@ const itemList = (data, filter, boxHtml) => {
 
     filters.forEach(filter => {
         let i = data.findIndex((element) => element.toLowerCase() === (filter.name).toLowerCase())
-        console.log(i)
         data.splice(i, 1)
     })
 
     data = data.filter((ele, pos) => {
         return data.indexOf(ele.toLowerCase()) == pos;
     });
-    console.log(data)
     data.forEach((element) => {
         element = element.charAt(0).toUpperCase() + element.slice(1);
         let elementText = document.createElement("a");
@@ -232,7 +226,6 @@ const itemList = (data, filter, boxHtml) => {
 
 const displayFilters = (nameFilter, input) => {
     if (nameFilter === "Ingredients") {
-        console.log(ingredients)
         ingredients = ingredients.filter((ingredient) => {
             let inputTest = ingredient.toLowerCase().indexOf(input.value) > -1;
             return inputTest == true;
@@ -248,7 +241,6 @@ const displayFilters = (nameFilter, input) => {
 
     } else if (nameFilter === "Appareils") {
         appliances = appliances.filter((appliance) => {
-            console.log(appliance)
             let inputTest = appliance.toLowerCase().indexOf(input.value) > -1;
             return inputTest == true;
         });
@@ -266,24 +258,13 @@ const filterByItem = () => {
     filtersLinks.forEach(item => {
         item.addEventListener("click", function (e) {
             let typeFilter = item.parentNode
-            console.log(typeFilter)
             let itemText = e.target.innerText
-            console.log("item text :" + itemText)
             let isIngredient = typeFilter.classList.contains("ingredientsBox")
             let isUstensil = typeFilter.classList.contains("ustensilsBox")
             let isAppliance = typeFilter.classList.contains("appliancesBox")
-            console.log(isIngredient)
-            console.log(isUstensil)
             if (isIngredient === true) {
-                console.log(ingredients)
-                console.log(ingredients)
                 itemList(ingredients, "Ingredients", ingredientsBox);
-                console.log(ingredients)
-
-                console.log("je filtre avec un ingrédient")
-                console.log(filters)
                 filters.push({ name: itemText, type: "ingredient" })
-                console.log(filters)
                 renderKeyWords()
                 removeKeyWord("ingredient")
                 btnOpenFilter1.style.display = "flex";
@@ -292,10 +273,7 @@ const filterByItem = () => {
 
             } else if (isUstensil === true) {
                 itemList(ustensils, "Ustensiles", ustensilsBox);
-                console.log(ustensils)
-                console.log("je filtre avec un ustensile")
                 filters.push({ name: itemText, type: "ustensil" })
-                console.log(filters)
                 renderKeyWords()
                 removeKeyWord("ustensil")
                 btnOpenFilter2.style.display = "flex";
@@ -305,10 +283,7 @@ const filterByItem = () => {
             } else if (isAppliance === true) {
 
                 itemList(appliances, "Appareils", appliancesBox);
-                console.log(ustensils)
-                console.log("je filtre avec un appareil")
                 filters.push({ name: itemText, type: "appliance" })
-                console.log(filters)
                 renderKeyWords()
                 removeKeyWord("appliance")
                 btnOpenFilter3.style.display = "flex";
@@ -328,7 +303,6 @@ const filterByItem = () => {
 
 const renderKeyWords = () => {
     document.getElementById("boxKeyWord").innerHTML = ""
-    console.log(filters)
     filters.forEach(filter => {
         renderKeyWord(filter.name, filter.type)
     })
@@ -342,8 +316,6 @@ const renderKeyWords = () => {
 
 const renderKeyWord = (title, type) => {
     let color
-    console.log(type)
-
     if (type == "ingredient") {
         color = "ingredientsColor"
     } else if (type == "ustensil") {
@@ -371,45 +343,34 @@ const removeKeyWord = (type) => {
     let removeKeyWordLinks = document.querySelectorAll(".keyWord__link")
     removeKeyWordLinks.forEach(keyWordLink => {
         let itemToRemove = keyWordLink.parentNode.firstElementChild.innerText
-        console.log(keyWordLink)
         keyWordLink.addEventListener("click", function () {
-            console.log(keyWordLink.parentNode.firstElementChild.innerText)
-            console.log(JSON.stringify(itemToRemove))
-
-            const indexFilter = filters.findIndex((element) => element.name === itemToRemove);
+               const indexFilter = filters.findIndex((element) => element.name === itemToRemove);
             filters.splice(indexFilter, 1)
 
             keyWordLink.parentNode.remove()
-            console.log(filters)
-            console.log(type)
+       
 
             if (type === "ingredient") {
-                console.log(itemToRemove)
                 ingredients.push(itemToRemove.toLowerCase())
                 btnOpenFilter1.style.display = "flex";
                 containBtnOpen1.style.display = "none";
                 ingredientsBox.style.display = "none";
-                console.log(ingredients)
             }
             if (type === "ustensil") {
-                console.log(itemToRemove)
                 ustensils.push(itemToRemove.toLowerCase())
                 btnOpenFilter2.style.display = "flex";
                 containBtnOpen2.style.display = "none";
                 ustensilsBox.style.display = "none";
-                console.log(ustensils)
             }
             if (type === "appliance") {
-                console.log(itemToRemove)
                 appliances.push(itemToRemove.toLowerCase())
                 btnOpenFilter3.style.display = "flex";
                 containBtnOpen3.style.display = "none";
                 appliancesBox.style.display = "none";
-                console.log(appliances)
             }
             // eslint-disable-next-line
-            filter()
             filterRecipes()
+            filter()
         })
     })
 }
@@ -434,7 +395,6 @@ export const filterRecipes = () => {
             newAllRecipesTest = newAllRecipes.filter(recipe => {
                 let inputTest
                 inputTest = JSON.stringify(recipe.ustensils).toLocaleLowerCase().indexOf(filter.name.toLocaleLowerCase()) > -1
-                console.log(inputTest)
                 return inputTest == true
             })
         }

@@ -28,11 +28,12 @@ inputSearch.addEventListener("keyup", function() {
 
     if (nbStrings >= 3) {
         var t0 = performance.now();
+        filterRecipes()
+
         filter()
         var t1 = performance.now();
         console.log("L'appel de filter a demandé " + (t1 - t0) + " millisecondes.")
         // eslint-disable-next-line
-        filterRecipes()
     } else {
          // eslint-disable-next-line
          newAllRecipes = recipesJSON

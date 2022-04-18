@@ -2,24 +2,7 @@ import { recipesJSON } from "../recipes.js"
 import { newAllRecipes } from "./nativeGeneralSearch.js"
 import { Recipe } from "./RecipeFactory.js"
 
-async function getRecipes() {
-    return fetch(window.location.href.replace("/index.html", "") + "/recipes.js")
 
-    .then(function(httpBodyResponse) {
-        return httpBodyResponse.json()
-    })
-
-    .then(function(response) {
-        allRecipes = response
-        console.log(allRecipes)
-        return allRecipes
-    })
-
-    .catch(function(error) {
-        console.log(error)
-        return []
-    })
-}
 
 export function displayRecipes(newAllRecipes) {
     let datas = ""
@@ -38,7 +21,6 @@ export function displayRecipes(newAllRecipes) {
 }
 
 async function init() {
-    //await getRecipes()
     displayRecipes(newAllRecipes)
 }
 
