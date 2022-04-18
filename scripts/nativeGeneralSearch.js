@@ -31,19 +31,18 @@ const filter = () => {
     console.log(inputSearch.value)
     newAllRecipes = []
     if(inputSearch.value === ""){
+        // eslint-disable-next-line
         newAllRecipes = allRecipes.recipes
     }
     else{
-        console.log('eee')
-        for (recipe of allRecipes.recipes) {
+        // eslint-disable-next-line
+        for (let recipe of allRecipes.recipes) {
             let stringRecipe = JSON.stringify(recipe)
             let stringRecipeLowerCase = stringRecipe.toLowerCase()
             
             let inputTest = stringRecipeLowerCase.indexOf(inputSearch.value) > -1
             console.log(inputTest)
             if (inputTest == true) {
-                //let i = newAllRecipes.findIndex((element) => element === recipe)
-                //console.log(i)
                 newAllRecipes.push(recipe)
             }
         
@@ -58,7 +57,6 @@ const filter = () => {
     }
     
     // eslint-disable-next-line
-    console.log(newAllRecipes)
     displayRecipes()
     return newAllRecipes
 }

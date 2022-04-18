@@ -404,7 +404,6 @@ const removeKeyWord = (type) => {
             }
             // eslint-disable-next-line
             filter()
-            console.log(newAllRecipes)
             filterRecipes()
         })
     })
@@ -443,6 +442,7 @@ const filterRecipes = () => {
             })
         }    
     })
+    // eslint-disable-next-line
     if(newAllRecipes.length === 0){
         document.querySelector(".noMatchRecipeBox").style.display = "flex"
     }
