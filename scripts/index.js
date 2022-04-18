@@ -20,11 +20,14 @@ async function getRecipes() {
 
 function displayRecipes() {
     let datas = ""
+    // eslint-disable-next-line
     if (newAllRecipes !== 0) {
+            // eslint-disable-next-line
         datas = newAllRecipes
     } else { datas = allRecipes.recipes }
     document.getElementById("recipes").innerHTML = ""
     datas.forEach(data => {
+        // eslint-disable-next-line
         const recipeCard = new Recipe(data)
         recipeCard.renderCardRecipe()
 

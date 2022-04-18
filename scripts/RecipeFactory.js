@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 class Recipe {
     constructor(data) {
         this._id = data.id
