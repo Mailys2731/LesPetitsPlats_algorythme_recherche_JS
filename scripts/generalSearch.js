@@ -1,6 +1,9 @@
+import { recipesJSON } from "../recipes.js"
+import { filterRecipes } from "./ingredientsFilter.js"
+import { displayRecipes } from "./index.js"
 let inputSearch = document.querySelector(".formSearch__input")
 let newAllRecipes = 0
-let nbStrings = Number
+export let nbStrings = Number
 
 /**
  *Fonction qui récupère le nombre de caractères entrés dans l'input
@@ -53,7 +56,7 @@ inputSearch.addEventListener("keyup", function() {
 
 const filter = () => {
     // eslint-disable-next-line
-    let = inputSearchNoAccent = strNoAccent(inputSearch.value)
+    let inputSearchNoAccent = strNoAccent(inputSearch.value)
     newAllRecipes = allRecipes.recipes.filter(recipe => {
         let stringRecipe = JSON.stringify(recipe)
         let stringRecipeLowerCase = stringRecipe.toLowerCase()
