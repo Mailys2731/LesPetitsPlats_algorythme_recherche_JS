@@ -8,6 +8,18 @@ const countStringsInput = (input) => {
     nbStrings = inputValue.length
 }
 
+const  strNoAccent = (a) => {
+    var b="áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ",
+        c="aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY",
+        d="";
+    for(var i = 0, j = a.length; i < j; i++) {
+      var e = a.substr(i, 1);
+      d += (b.indexOf(e) !== -1) ? c.substr(b.indexOf(e), 1) : e;
+    }
+    return d;
+  }
+
+
 inputSearch.addEventListener("keyup", function() {
     countStringsInput(inputSearch)
 
@@ -38,8 +50,8 @@ const filter = () => {
         for (let recipe of allRecipes.recipes) {
             let stringRecipe = JSON.stringify(recipe)
             let stringRecipeLowerCase = stringRecipe.toLowerCase()
-            
-            let inputTest = stringRecipeLowerCase.indexOf(inputSearch.value) > -1
+            let stringRecipeNoAccent = strNoAccent(stringRecipeLowerCase)
+            let inputTest = stringRecipeNoAccent.indexOf(inputSearch.value.toLowerCase()) > -1
             if (inputTest == true) {
                 newAllRecipes.push(recipe)
             }
