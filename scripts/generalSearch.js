@@ -23,7 +23,7 @@ inputSearch.addEventListener("keyup", function() {
         var t1 = performance.now();
         console.log("L'appel de doSomething a demandé " + (t1 - t0) + " millisecondes.")
         
-        //fonction qui concerne les filtres
+        //fonction qui concerne les filtres par mots clés
         // eslint-disable-next-line
         filterRecipes()
     } else {
