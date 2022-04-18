@@ -386,9 +386,7 @@ const removeKeyWord = (type) => {
  * Fonction qui filtres la liste des recettes en fonction des éléments de filtrage activés
  */
 
-export const filterRecipes = () => {
-    console.log(newAllRecipes)
-    
+export const filterRecipes = () => {   
     // eslint-disable-next-line
     filters.forEach(filter => {
         if (filter.type == "ingredient") {
@@ -416,8 +414,6 @@ export const filterRecipes = () => {
             })
         }    
     })
-    console.log(newAllRecipesTest)
-
     // eslint-disable-next-line
     if(newAllRecipes.length === 0){
         document.querySelector(".noMatchRecipeBox").style.display = "flex"

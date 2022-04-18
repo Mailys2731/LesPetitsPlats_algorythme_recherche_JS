@@ -71,10 +71,8 @@ export const filter = () => {
         document.querySelector(".noMatchRecipeBox").style.display = "none"
 
     }
-    console.log(newAllRecipes)
     // eslint-disable-next-line
     displayRecipes(newAllRecipes)
-    console.log(newAllRecipes)
 
    
 
