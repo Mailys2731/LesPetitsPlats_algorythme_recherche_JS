@@ -22,7 +22,8 @@ inputSearch.addEventListener("keyup", function() {
         filter()
         var t1 = performance.now();
         console.log("L'appel de doSomething a demandé " + (t1 - t0) + " millisecondes.")
-      
+        
+        //fonction qui concerne les filtres
         // eslint-disable-next-line
         filterRecipes()
     } else {
