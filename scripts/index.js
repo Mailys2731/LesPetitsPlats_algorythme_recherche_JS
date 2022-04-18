@@ -32,7 +32,6 @@ function displayRecipes() {
         recipeCard.renderCardRecipe()
 
     });
-    console.log("recettes actualisées")
 }
 
 async function init() {

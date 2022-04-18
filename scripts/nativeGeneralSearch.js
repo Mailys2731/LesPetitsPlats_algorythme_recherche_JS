@@ -28,7 +28,6 @@ inputSearch.addEventListener("keyup", function() {
 })
 
 const filter = () => {
-    console.log(inputSearch.value)
     newAllRecipes = []
     if(inputSearch.value === ""){
         // eslint-disable-next-line
@@ -41,7 +40,6 @@ const filter = () => {
             let stringRecipeLowerCase = stringRecipe.toLowerCase()
             
             let inputTest = stringRecipeLowerCase.indexOf(inputSearch.value) > -1
-            console.log(inputTest)
             if (inputTest == true) {
                 newAllRecipes.push(recipe)
             }
