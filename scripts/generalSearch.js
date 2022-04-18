@@ -11,7 +11,7 @@ const countStringsInput = (input) => {
     nbStrings = inputValue.length
 }
 
-function strNoAccent(a) {
+const strNoAccent = (a) => {
     var b="áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ",
         c="aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY",
         d="";
