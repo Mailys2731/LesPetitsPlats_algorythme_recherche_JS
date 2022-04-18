@@ -4,6 +4,7 @@ import { Recipe } from "./RecipeFactory.js"
 
 
 export function displayRecipes(newAllRecipes) {
+    console.log(newAllRecipes)
     let datas = ""
     // eslint-disable-next-line
     if (newAllRecipes !== 0) {

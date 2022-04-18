@@ -2,6 +2,7 @@ import { recipesJSON } from "../recipes.js"
 import { filterRecipes } from "./ingredientsFilter.js"
 import { displayRecipes } from "./index.js"
 let inputSearch = document.querySelector(".formSearch__input")
+
 export let newAllRecipes = 0
 export let nbStrings = Number
 
@@ -33,6 +34,8 @@ inputSearch.addEventListener("keyup", function() {
     countStringsInput(inputSearch)
   
     if (nbStrings >= 3) {
+        filterRecipes()
+
         var t0 = performance.now();
         filter()
         var t1 = performance.now();
@@ -40,7 +43,6 @@ inputSearch.addEventListener("keyup", function() {
         
         //fonction qui concerne les filtres par mots clés
         // eslint-disable-next-line
-        filterRecipes()
     } else {
         // eslint-disable-next-line
         filterRecipes()
@@ -69,8 +71,11 @@ export const filter = () => {
         document.querySelector(".noMatchRecipeBox").style.display = "none"
 
     }
+    console.log(newAllRecipes)
     // eslint-disable-next-line
     displayRecipes(newAllRecipes)
+    console.log(newAllRecipes)
+
    
-    return newAllRecipes
+
 }

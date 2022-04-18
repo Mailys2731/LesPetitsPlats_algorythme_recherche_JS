@@ -375,8 +375,9 @@ const removeKeyWord = (type) => {
                 appliancesBox.style.display = "none";
             }
             // eslint-disable-next-line
-            filter()
             filterRecipes()
+
+            filter()
         })
     })
 }
@@ -386,6 +387,8 @@ const removeKeyWord = (type) => {
  */
 
 export const filterRecipes = () => {
+    console.log(newAllRecipes)
+    
     // eslint-disable-next-line
     filters.forEach(filter => {
         if (filter.type == "ingredient") {
@@ -413,6 +416,8 @@ export const filterRecipes = () => {
             })
         }    
     })
+    console.log(newAllRecipesTest)
+
     // eslint-disable-next-line
     if(newAllRecipes.length === 0){
         document.querySelector(".noMatchRecipeBox").style.display = "flex"
