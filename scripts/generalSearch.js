@@ -1,4 +1,4 @@
-const inputSearch = document.querySelector(".formSearch__input")
+let inputSearch = document.querySelector(".formSearch__input")
 let newAllRecipes = 0
 let nbStrings = Number
 
@@ -11,12 +11,24 @@ const countStringsInput = (input) => {
     nbStrings = inputValue.length
 }
 
+function strNoAccent(a) {
+    var b="áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ",
+        c="aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY",
+        d="";
+    for(var i = 0, j = a.length; i < j; i++) {
+      var e = a.substr(i, 1);
+      d += (b.indexOf(e) !== -1) ? c.substr(b.indexOf(e), 1) : e;
+    }
+    return d;
+  }
+
 /**
  * AddEventListener de la barre de recherche principale
  */
 
 inputSearch.addEventListener("keyup", function() {
     countStringsInput(inputSearch)
+  
     if (nbStrings >= 3) {
         var t0 = performance.now();
         filter()
@@ -41,10 +53,12 @@ inputSearch.addEventListener("keyup", function() {
 
 const filter = () => {
     // eslint-disable-next-line
+    let = inputSearchNoAccent = strNoAccent(inputSearch.value)
     newAllRecipes = allRecipes.recipes.filter(recipe => {
         let stringRecipe = JSON.stringify(recipe)
         let stringRecipeLowerCase = stringRecipe.toLowerCase()
-        let inputTest = stringRecipeLowerCase.indexOf(inputSearch.value) > -1
+        let stringRecipeNoAccent = strNoAccent(stringRecipeLowerCase)
+        let inputTest = stringRecipeNoAccent.indexOf(inputSearchNoAccent.toLowerCase()) > -1
         return inputTest == true
     });
     if(newAllRecipes.length === 0){
