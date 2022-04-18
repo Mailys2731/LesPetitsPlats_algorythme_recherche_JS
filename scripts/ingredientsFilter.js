@@ -1,6 +1,6 @@
-import { newAllRecipes } from "./nativeGeneralSearch.js";
+import { newAllRecipes } from "./generalSearch.js";
 import { displayRecipes } from "./index.js";
-import { filter } from "./nativeGeneralSearch.js";
+import { filter } from "./generalSearch.js";
 import { recipesJSON } from "../recipes.js";
 const btnOpenFilter1 = document.querySelector(".openBtn1");
 const btnOpenFilter2 = document.querySelector(".openBtn2");

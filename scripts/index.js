@@ -1,5 +1,5 @@
 import { recipesJSON } from "../recipes.js"
-import { newAllRecipes } from "./nativeGeneralSearch.js"
+import { newAllRecipes } from "./generalSearch.js"
 import { Recipe } from "./RecipeFactory.js"
 
 

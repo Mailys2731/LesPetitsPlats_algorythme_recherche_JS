@@ -2,7 +2,7 @@ import { recipesJSON } from "../recipes.js"
 import { filterRecipes } from "./ingredientsFilter.js"
 import { displayRecipes } from "./index.js"
 let inputSearch = document.querySelector(".formSearch__input")
-let newAllRecipes = 0
+export let newAllRecipes = 0
 export let nbStrings = Number
 
 /**
@@ -43,8 +43,6 @@ inputSearch.addEventListener("keyup", function() {
         filterRecipes()
     } else {
         // eslint-disable-next-line
-        newAllRecipes = allRecipes.recipes
-        // eslint-disable-next-line
         filterRecipes()
     }
 })
@@ -54,10 +52,10 @@ inputSearch.addEventListener("keyup", function() {
  * @returns {Array} tableau des recettes filtré en fonction de l'entrée dfans la barre de recherche
  */
 
-const filter = () => {
+export const filter = () => {
     // eslint-disable-next-line
     let inputSearchNoAccent = strNoAccent(inputSearch.value)
-    newAllRecipes = allRecipes.recipes.filter(recipe => {
+    newAllRecipes = recipesJSON.filter(recipe => {
         let stringRecipe = JSON.stringify(recipe)
         let stringRecipeLowerCase = stringRecipe.toLowerCase()
         let stringRecipeNoAccent = strNoAccent(stringRecipeLowerCase)
@@ -72,7 +70,7 @@ const filter = () => {
 
     }
     // eslint-disable-next-line
-    displayRecipes()
+    displayRecipes(newAllRecipes)
    
     return newAllRecipes
 }
