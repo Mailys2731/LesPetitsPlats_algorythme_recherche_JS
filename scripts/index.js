@@ -1,7 +1,9 @@
-let allRecipes
+import { recipesJSON } from "../recipes.js"
+import { newAllRecipes } from "./nativeGeneralSearch.js"
+import { Recipe } from "./RecipeFactory.js"
 
 async function getRecipes() {
-    return fetch(window.location.href.replace("/index.html", "") + "/recipes.json")
+    return fetch(window.location.href.replace("/index.html", "") + "/recipes.js")
 
     .then(function(httpBodyResponse) {
         return httpBodyResponse.json()
@@ -9,6 +11,7 @@ async function getRecipes() {
 
     .then(function(response) {
         allRecipes = response
+        console.log(allRecipes)
         return allRecipes
     })
 
@@ -18,13 +21,13 @@ async function getRecipes() {
     })
 }
 
-function displayRecipes() {
+export function displayRecipes(newAllRecipes) {
     let datas = ""
     // eslint-disable-next-line
     if (newAllRecipes !== 0) {
             // eslint-disable-next-line
         datas = newAllRecipes
-    } else { datas = allRecipes.recipes }
+    } else { datas = recipesJSON }
     document.getElementById("recipes").innerHTML = ""
     datas.forEach(data => {
         // eslint-disable-next-line
@@ -35,8 +38,8 @@ function displayRecipes() {
 }
 
 async function init() {
-    await getRecipes()
-    displayRecipes()
+    //await getRecipes()
+    displayRecipes(newAllRecipes)
 }
 
 init()

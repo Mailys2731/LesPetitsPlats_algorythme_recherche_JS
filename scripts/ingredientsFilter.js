@@ -1,3 +1,7 @@
+import { newAllRecipes } from "./nativeGeneralSearch.js";
+import { displayRecipes } from "./index.js";
+import { filter } from "./nativeGeneralSearch.js";
+import { recipesJSON } from "../recipes.js";
 const btnOpenFilter1 = document.querySelector(".openBtn1");
 const btnOpenFilter2 = document.querySelector(".openBtn2");
 const btnOpenFilter3 = document.querySelector(".openBtn3");
@@ -18,6 +22,7 @@ let ustensils = [];
 let appliances = [];
 let filters = [];
 let filtersLinks = [];
+let newAllRecipesTest = [];
 
 /**
  * AddEventListeners booutons ouverture filtres ingrédients ||ustensiles || appareils
@@ -145,7 +150,7 @@ const itemList = (data, filter, boxHtml) => {
         }
         else {
             // eslint-disable-next-line
-            allRecipes.recipes.forEach((recipe) => {
+            recipesJSON.forEach((recipe) => {
                 recipe.ingredients.forEach((ingredient) => {
                     data.push(ingredient.ingredient.toLowerCase());
                 })
@@ -413,12 +418,12 @@ const removeKeyWord = (type) => {
  * Fonction qui filtres la liste des recettes en fonction des éléments de filtrage activés
  */
 
-const filterRecipes = () => {
+export const filterRecipes = () => {
     // eslint-disable-next-line
     filters.forEach(filter => {
         if (filter.type == "ingredient") {
             // eslint-disable-next-line
-            newAllRecipes = newAllRecipes.filter(recipe => {
+            newAllRecipesTest = newAllRecipes.filter(recipe => {
                 let inputTest
                 inputTest = JSON.stringify(recipe.ingredients).indexOf(filter.name) > -1
                 return inputTest == true
@@ -426,7 +431,7 @@ const filterRecipes = () => {
         }
         else if (filter.type == "ustensil") {
             // eslint-disable-next-line
-            newAllRecipes = newAllRecipes.filter(recipe => {
+            newAllRecipesTest = newAllRecipes.filter(recipe => {
                 let inputTest
                 inputTest = JSON.stringify(recipe.ustensils).toLocaleLowerCase().indexOf(filter.name.toLocaleLowerCase()) > -1
                 console.log(inputTest)
@@ -435,7 +440,7 @@ const filterRecipes = () => {
         }
         else if (filter.type == "appliance") {
             // eslint-disable-next-line
-            newAllRecipes = newAllRecipes.filter(recipe => {
+            newAllRecipesTest = newAllRecipes.filter(recipe => {
                 let inputTest
                 inputTest = JSON.stringify(recipe.appliance).toLocaleLowerCase().indexOf(filter.name.toLocaleLowerCase()) > -1
                 return inputTest == true
@@ -451,7 +456,7 @@ const filterRecipes = () => {
 
     }
     // eslint-disable-next-line
-    displayRecipes()
+    displayRecipes(newAllRecipesTest)
 }
 
 

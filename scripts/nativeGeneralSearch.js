@@ -1,6 +1,9 @@
+import { recipesJSON } from "../recipes.js"
+import { filterRecipes } from "./ingredientsFilter.js"
+import { displayRecipes } from "./index.js"
 const inputSearch = document.querySelector(".formSearch__input")
 let nbStrings = Number
-let newAllRecipes = 0
+export let newAllRecipes = 0
 
 
 const countStringsInput = (input) => {
@@ -32,22 +35,22 @@ inputSearch.addEventListener("keyup", function() {
         filterRecipes()
     } else {
          // eslint-disable-next-line
-         newAllRecipes = allRecipes.recipes
+         newAllRecipes = recipesJSON
          // eslint-disable-next-line
          filterRecipes()
     }
     
 })
 
-const filter = () => {
+export const filter = () => {
     newAllRecipes = []
     if(inputSearch.value === ""){
         // eslint-disable-next-line
-        newAllRecipes = allRecipes.recipes
+        newAllRecipes = recipesJSON
     }
     else{
         // eslint-disable-next-line
-        for (let recipe of allRecipes.recipes) {
+        for (let recipe of recipesJSON) {
             let stringRecipe = JSON.stringify(recipe)
             let stringRecipeLowerCase = stringRecipe.toLowerCase()
             let stringRecipeNoAccent = strNoAccent(stringRecipeLowerCase)
@@ -67,6 +70,6 @@ const filter = () => {
     }
     
     // eslint-disable-next-line
-    displayRecipes()
+    displayRecipes(newAllRecipes)
     return newAllRecipes
 }
